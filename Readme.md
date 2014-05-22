@@ -9,12 +9,10 @@
 
 ![demo](vipe-demo.gif)
 
-## Usage
+## Installation
 
 ```bash
-$ echo foo | vipe | gist
-
-$ vipe | gist
+$ npm install -g juliangruber/vipe
 ```
 
 ## Origin
@@ -22,10 +20,18 @@ $ vipe | gist
 This is a lightweight bash only version. For the original impementation in
 python, check https://github.com/madx/moreutils/blob/master/vipe.
 
-## Installation
+## Power combo with [gist](https://github.com/defunkt/gist) and [cipherhub](https://github.com/substack/cipherhub)
+
+  Store some data encrypted in a gist:
 
 ```bash
-$ npm install -g juliangruber/vipe
+$ vipe | cipherhub <GITHUB-USERNAME> | gist -pw
+```
+
+  And you get a raw gist url. To edit and update the gist in plain text:
+
+```bash
+$ curl -sL <GIST-URL> | cipherhub | vipe | cipherhub <GITHUB-USERNAME> | gist -u <GIST-URL>
 ```
 
 ## License
