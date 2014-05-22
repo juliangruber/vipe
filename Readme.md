@@ -22,7 +22,7 @@ python, check https://github.com/madx/moreutils/blob/master/vipe.
 
 ## Power combo with [gist](https://github.com/defunkt/gist) and [cipherhub](https://github.com/substack/cipherhub)
 
-  With those functions in your `~/.bash_profile`:
+  With those functions in your `~/.bash_profile` (change username):
 
 ```bash
 cipherup(){
