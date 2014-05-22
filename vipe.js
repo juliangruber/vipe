@@ -11,13 +11,13 @@ var concat = require('concat-stream');
 var run = require('comandante');
 
 var tmp = '/tmp/vipe.' + Math.random() + '.txt';
-fs.touchSync(tmp);
 
 process.stdin.isTTY()
   ? start('')
   : process.stdin.pipe(concat(start));
 
 function start(stdin){
+  fs.writeFileSync(tmp, stdin);
   var ed = process.env.EDITOR || 'vi';
   run(ed, [tmp], { stdio: 'pipe' })
   .on('exit', function(){
