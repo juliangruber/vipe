@@ -25,7 +25,7 @@ python, check https://github.com/madx/moreutils/blob/master/vipe.
   Store some data encrypted in a gist:
 
 ```bash
-$ vipe | cipherhub <GITHUB-USERNAME> | gist -pw
+$ vipe | cipherhub <GITHUB-USERNAME> | gist -pR
 ```
 
   And you get a raw gist url. To edit and update the gist in plain text:
