@@ -3,7 +3,7 @@
 
   Pipe in and out of `$EDITOR`.
 
-  Finally your editor is a real unix fellow!
+  Finally your editor is a real unix fellow, even if it doesn't support pipes at all!
 
 ## Example
 
