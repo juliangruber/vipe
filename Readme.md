@@ -34,6 +34,27 @@ $ vipe | cipherhub <GITHUB-USERNAME> | gist -pR | cut -d/ -f1-5
 $ curl -sL <GIST-URL>/raw | cipherhub | vipe | cipherhub <GITHUB-USERNAME> | gist -u <GIST-URL>
 ```
 
+  I have this in my `~/.bash_profile`:
+
+```bash
+cipherup(){
+  cipherhub juliangruber | gist -pR | cut -d/ -f1-5
+}
+
+cipheredit(){
+  curl -sL $1/raw | cipherhub | vipe | cipherhub juliangruber | gist -u $1
+}
+```
+
+  So I can do:
+
+```bash
+$ echo some secrets | cipherup
+<GIST-URL>
+
+$ cipheredit <GIST-URL>
+```
+
 ## License
 
   MIT
