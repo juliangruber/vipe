@@ -1,0 +1,10 @@
+{
+  "name": "vipe",
+  "version": "0.0.0",
+  "description": "Pipe in and out of $EDITOR",
+  "repository": "juliangruber/vipe",
+  "bin": {
+    "vipe": "vipe.sh"  
+  },
+  "license": "MIT"
+}
