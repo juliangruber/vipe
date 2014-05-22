@@ -22,19 +22,7 @@ python, check https://github.com/madx/moreutils/blob/master/vipe.
 
 ## Power combo with [gist](https://github.com/defunkt/gist) and [cipherhub](https://github.com/substack/cipherhub)
 
-  Store some data encrypted in a gist:
-
-```bash
-$ vipe | cipherhub <GITHUB-USERNAME> | gist -pR | cut -d/ -f1-5
-```
-
-  And you get a raw gist url. To edit and update the gist in plain text:
-
-```bash
-$ curl -sL <GIST-URL>/raw | cipherhub | vipe | cipherhub <GITHUB-USERNAME> | gist -u <GIST-URL>
-```
-
-  I have this in my `~/.bash_profile`:
+  With those functions in your `~/.bash_profile`:
 
 ```bash
 cipherup(){
@@ -46,12 +34,16 @@ cipheredit(){
 }
 ```
 
-  So I can do:
+  Store some secret data in a gist:
 
 ```bash
 $ echo some secrets | cipherup
 <GIST-URL>
+```
 
+  And edit it again:
+
+```bash
 $ cipheredit <GIST-URL>
 ```
 
