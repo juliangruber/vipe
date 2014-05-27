@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "Pipe in and out of $EDITOR",
   "repository": "juliangruber/vipe",
+  "global": true,
   "bin": {
-    "vipe": "vipe.sh"  
+    "vipe": "vipe.sh"
   },
   "license": "MIT"
 }
