@@ -18,7 +18,7 @@ $ npm install -g juliangruber/vipe
 ## Origin
 
 This is a lightweight bash only version. For the original impementation in
-python, check https://github.com/madx/moreutils/blob/master/vipe.
+Perl, check https://github.com/madx/moreutils/blob/master/vipe.
 
 ## Power combo with [gist](https://github.com/defunkt/gist) and [cipherhub](https://github.com/substack/cipherhub)
 
