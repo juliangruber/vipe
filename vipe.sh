@@ -15,6 +15,19 @@
 # python, check https://github.com/madx/moreutils/blob/master/vipe
 #
 
+# version
+
+VERSION="0.0.0"
+
+# usage
+
+if [ "-h" = "${1}" ]; then
+  echo "usage: vipe [-hV]"
+  exit 0
+elif [ "-V" = "${1}" ]; then
+  echo "${VERSION}"
+fi
+
 # temp file
 
 t=/tmp/vipe.$$.txt
