@@ -26,6 +26,10 @@ if [ "-h" = "${1}" ]; then
   exit 0
 elif [ "-V" = "${1}" ]; then
   echo "${VERSION}"
+else
+  echo "unknown option \"${1}\""
+  echo "usage: vipe [-hV]"
+  exit 1
 fi
 
 # temp file
