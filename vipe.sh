@@ -21,16 +21,19 @@ VERSION="0.0.0"
 
 # usage
 
-if [ "-h" = "${1}" -o -z "${1}" ]; then
-  echo "usage: vipe [-hV]"
-  exit 0
-elif [ "-V" = "${1}" ]; then
-  echo "${VERSION}"
-  exit 0
-else
-  echo "unknown option \"${1}\""
-  echo "usage: vipe [-hV]"
-  exit 1
+if [ ${1} ]; then
+  case "${1}" in
+  "-h")
+    echo "usage: vipe [-hV]"
+    exit 0 ;;
+  "-V")
+    echo "$VERSION"
+    exit 0 ;;
+  *)
+    echo "unknown option: \"${1}\""
+    echo "usage: vipe [-hV]"
+    exit 1 
+  esac
 fi
 
 # temp file
