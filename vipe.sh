@@ -21,11 +21,12 @@ VERSION="0.0.0"
 
 # usage
 
-if [ "-h" = "${1}" ]; then
+if [ "-h" = "${1}" -o -z "${1}" ]; then
   echo "usage: vipe [-hV]"
   exit 0
 elif [ "-V" = "${1}" ]; then
   echo "${VERSION}"
+  exit 0
 else
   echo "unknown option \"${1}\""
   echo "usage: vipe [-hV]"
