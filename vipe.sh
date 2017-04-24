@@ -60,7 +60,7 @@ fi
 
 # spawn editor with stdio connected
 
-${EDITOR} $t < /dev/tty > /dev/tty || exit $?
+${EDITOR:-vi} $t < /dev/tty > /dev/tty || exit $?
 
 if [ "${usexargs}" -eq 1 ]; then
   echo $t
