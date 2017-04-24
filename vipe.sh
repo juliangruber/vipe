@@ -22,10 +22,17 @@ VERSION="0.1.0"
 # Set this to 1 to output filename instead of file contents.
 usexargs=0
 
-if [ ${1} ]; then
+# usage
+if [ -n "${1}" ]; then
   case "${1}" in
   "-h")
-    echo "usage: vipe [-hV]"
+    echo "usage: vipe [-hVx]"
+    echo
+    echo "-h this help"
+    echo "-V version"
+    echo "-x output filename instead of file contents."
+    echo "   Use this to run with xargs to run the filename not stream the file contents."
+    echo "   Example: cat longfile.sh | vipe -x | xargs sh"
     exit 0 ;;
   "-V")
     echo "$VERSION"
@@ -35,7 +42,7 @@ if [ ${1} ]; then
     ;;
   *)
     echo "unknown option: \"${1}\""
-    echo "usage: vipe [-hV]"
+    echo "usage: vipe [-hVx]"
     exit 1 
   esac
 fi
