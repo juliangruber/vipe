@@ -19,7 +19,8 @@
 
 VERSION="0.1.0"
 
-# usage
+# Set this to 1 to output filename instead of file contents.
+usexargs=0
 
 if [ ${1} ]; then
   case "${1}" in
@@ -29,6 +30,9 @@ if [ ${1} ]; then
   "-V")
     echo "$VERSION"
     exit 0 ;;
+  "-x")
+    usexargs=1
+    ;;
   *)
     echo "unknown option: \"${1}\""
     echo "usage: vipe [-hV]"
@@ -51,11 +55,12 @@ fi
 
 ${EDITOR} $t < /dev/tty > /dev/tty || exit $?
 
-# write to stdout
+if [ "${usexargs}" -eq 1 ]; then
+  echo $t
+else
+  # write to stdout
+  cat $t
 
-cat $t
-
-# cleanup
-
-rm $t
-
+  # cleanup
+  rm $t
+fi
