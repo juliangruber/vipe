@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 #
 # vipe(1) - Pipe in and out of $EDITOR
@@ -11,17 +11,17 @@
 #   $ echo foo | vipe | gist
 #   $ vipe | gist
 #
-# This is a lightweight bash only version. For the original impementation in
+# This is a lightweight shell only version. For the original impementation in
 # python, check https://github.com/madx/moreutils/blob/master/vipe
 #
 
 # version
 
-VERSION="0.1.0"
+VERSION="0.1.1"
 
 # usage
 
-if [ ${1} ]; then
+if [ "${1}" ]; then
   case "${1}" in
   "-h")
     echo "usage: vipe [-hV]"
@@ -32,7 +32,7 @@ if [ ${1} ]; then
   *)
     echo "unknown option: \"${1}\""
     echo "usage: vipe [-hV]"
-    exit 1 
+    exit 1
   esac
 fi
 
