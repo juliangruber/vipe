@@ -3,7 +3,9 @@
 
   Pipe in and out of `$EDITOR`.
 
-  Finally your editor is a real unix fellow, even if it doesn't support pipes at all!
+  Finally your editor is a real unix fellow, even if it doesn't support pipes at all.
+  
+  See also https://github.com/juliangruber/go-vipe.
 
 ## Example
 
