@@ -9,6 +9,12 @@
 
 ## Example
 
+```bash
+# This will open an editor with the text "change me" loaded
+$ echo change me | vipe | tr '[:upper:]' '[:lower:]'
+CHANGED
+```
+
 ![demo](vipe-demo.gif)
 
 ## Installation
